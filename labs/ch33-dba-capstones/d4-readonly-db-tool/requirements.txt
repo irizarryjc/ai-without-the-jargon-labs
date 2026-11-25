@@ -1,0 +1,3 @@
+# Format as of November 2026; verified latest stable PyPI release.
+# Check https://pypi.org/project/mcp/ and re-pin periodically.
+mcp[cli]==2.3.0

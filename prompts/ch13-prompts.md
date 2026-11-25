@@ -94,8 +94,9 @@ Requirements:
 - Use synthetic, deterministic lab fixtures only.
 - Include negative tests for invalid inputs, missing files, and boundary values.
 - Do not weaken assertions or mock away the core validation logic.
-Explain how to run the tests now to confirm they fail as expected before
-implementation; do not assume any command will run without review.
+Explain how to run the tests now to confirm they fail before implementation.
+Explain the risk of each step and how to verify it; do not assume it will run
+without review.
 ```
 
 **What good output looks like:** A clean test file whose tests trace straight back to `SPEC.md` and fail cleanly until the real implementation is written.

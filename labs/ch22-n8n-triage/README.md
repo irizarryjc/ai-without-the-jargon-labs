@@ -35,4 +35,5 @@ $ curl -X POST http://localhost:5678/webhook-test/lab-alert-triage \
 ## Safety Reminder
 
 - Never expose port `5678` directly to the public internet without HTTPS and authentication.
+- **Approval webhook caution:** This disposable localhost (`127.0.0.1`) lab uses an unauthenticated webhook and a `GET` `resumeUrl?decision=approve` link for offline testing only. Beyond localhost, anyone with that URL could trigger approval, and chat link previews (Slack or Teams URL unfurling) can automatically follow `GET` links. In shared or production setups, enforce header authentication on webhooks, use `POST` approval forms or native **Send and Wait for Response** buttons, and never paste resume URLs into chat channels with automatic link unfurling.
 - Never paste production credentials, customer data, or live hostnames into lab payloads or exported JSON files.

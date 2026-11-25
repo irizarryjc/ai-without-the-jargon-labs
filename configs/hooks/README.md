@@ -18,7 +18,11 @@ These files accompany Chapter 21 (*Subagents, Hooks, Slash Commands, and Plugins
 | :--- | :--- | :--- | :--- |
 | `claude-code.settings.json` | Claude Code | `<project_root>/.claude/settings.json` | Exit code `2` + `stderr` message; `"onFailure": "block"` forces fail-closed on errors/timeouts |
 | `antigravity.hooks.json` | Google Antigravity (2.0, IDE, CLI) | `<project_root>/.agents/hooks.json` or `~/.gemini/config/hooks.json` | JSON `stdout` `{"decision": "deny", "reason": "..."}` with exit code `0` |
-| `copilot-cli.hooks.json` | GitHub Copilot CLI | `<project_root>/.github/hooks/safety-hooks.json` | JSON `stdout` `{"permissionDecision": "deny", "permissionDecisionReason": "..."}` (command hooks fail-closed on non-zero exit) |
+| `copilot-cli.hooks.json` | GitHub Copilot CLI | `<project_root>/.github/hooks/safety-hooks.json` | Uses documented `bash` and `powershell` keys (`command` is also accepted); JSON `stdout` `{"permissionDecision": "deny", "permissionDecisionReason": "..."}` (command hooks fail-closed on non-zero exit) |
+
+## Cross-Host Compatibility Note (Copilot CLI + Claude Code)
+
+GitHub Copilot CLI also reads `<project_root>/.claude/settings.json`. If a repository ships both `.claude/settings.json` and `.github/hooks/safety-hooks.json`, Copilot CLI will execute the Claude-format hook as well. Keep your guard script idempotent or choose one shared configuration per repository so you know which hook fires under each host.
 
 ## Test Locally Before Enabling
 

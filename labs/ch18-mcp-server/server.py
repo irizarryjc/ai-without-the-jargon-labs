@@ -3,9 +3,10 @@
 
 # Format as of November 2026; check current official Python MCP SDK docs.
 
-Install the official Python MCP SDK before running as an MCP server:
-    pip install "mcp[cli]"
-    # or: uv add "mcp[cli]"
+Install the official Python MCP SDK before running as an MCP server (pinned as of
+November 2026; check PyPI for newer security releases and re-pin):
+    pip install "mcp[cli]==2.3.0"
+    # or: uv add "mcp[cli]==2.3.0"
 
 Safety rules built into this server:
 - Strictly read-only SQLite URI (?mode=ro) plus PRAGMA query_only = ON.

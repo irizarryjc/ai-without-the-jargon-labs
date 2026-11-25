@@ -46,8 +46,7 @@ Requirements:
 - Preserve all primary-key, foreign-key, and NOT NULL constraints.
 - Include zero real people, companies, or production values.
 
-Explain how to verify row counts and constraints in a disposable lab database; do not
-assume any SQL will run without review.
+Explain the risk of each step and how to verify it; do not assume it will run without review.
 ```
 
 **What good output looks like:** Valid, constraint-safe synthetic inserts that mirror realistic query selectivity without touching production data.

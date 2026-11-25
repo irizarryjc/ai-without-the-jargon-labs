@@ -1,4 +1,4 @@
-# Format as of November 2026; install only the SDK(s) you plan to run.
-# Pin exact versions in team or production projects.
-openai-agents>=0.1.0
-google-adk>=1.0.0
+# Format as of November 2026; verified latest stable PyPI releases.
+# Install only the SDK(s) you plan to run; check PyPI release notes and re-pin periodically.
+openai-agents==0.26.0
+google-adk==2.14.1

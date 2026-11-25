@@ -39,8 +39,10 @@ python3 call_local_ollama.py
 
 ## Running the Cloud Responses API Example (Optional)
 
+> **Shell history tip:** Avoid leaving live API keys in `~/.bash_history`. On macOS/Linux, load the key silently with `read -s -p "API key: " OPENAI_API_KEY && export OPENAI_API_KEY`, use a secrets manager, or prefix `export` with a leading space in Bash when `HISTCONTROL=ignorespace` is enabled.
+
 ```bash
-# macOS / Linux
+# macOS / Linux (better: use read -s or a secrets manager instead of literal export)
 export OPENAI_API_KEY="<your_api_key>"
 export OPENAI_MODEL="<model_name>"
 bash call_openai_responses.sh

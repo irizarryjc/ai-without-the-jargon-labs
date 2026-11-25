@@ -15,7 +15,7 @@ Operations staff receive redacted plain-text log files from lab servers and need
 - No network calls, no subprocess shell calls, no writes to disk unless explicitly redirected by the user.
 
 ## 4. Implementation Tasks
-1. Review `starter_log_digest.py` and `test_log_digest.py`.
-2. Ask your coding agent (in Plan Mode first) to implement timestamp normalization in `normalize_error_line` and add `--format json` plus `--top` validation.
-3. Expand `test_log_digest.py` with edge-case tests (empty file, missing file, `--top 0`, mixed case).
+1. Review `starter_log_digest.py` and `test_log_digest.py` (which already implement and test AC-1 through AC-5, including timestamp normalization, `--format json`, and `--top` validation).
+2. Append **AC-6 (`--redact-preview`)** to this spec, then ask your coding agent (in Plan Mode first) to mask email addresses and IPv4 strings in `top_errors` using Python standard library `re` only when `--redact-preview` is passed.
+3. Expand `test_log_digest.py` with edge-case tests for AC-6 (`--redact-preview` enabled and disabled, zero matches, empty file, missing file, `--top 0`, mixed case).
 4. Review the full Git diff and run `python3 -m unittest discover -s g2-spec -v`.

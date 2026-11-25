@@ -19,7 +19,7 @@ python3 native_repl_lag.py --db repl_lab.db --dry-run
 python3 mcp_repl_lag_server.py --db repl_lab.db --self-test
 ```
 
-To inspect the MCP server interactively after installing `mcp[cli]`:
+To inspect the MCP server interactively after installing the pinned SDK (`pip install "mcp[cli]==2.3.0"`; check PyPI for newer security releases and re-pin):
 
 ```bash
 REPL_LAB_DB="$(pwd)/repl_lab.db" mcp dev mcp_repl_lag_server.py

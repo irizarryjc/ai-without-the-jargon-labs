@@ -1,1 +1,2 @@
-mcp[cli]
+# Pinned as of November 2026; check PyPI for newer security releases and re-pin.
+mcp[cli]==2.3.0

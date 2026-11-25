@@ -104,7 +104,8 @@ companion-repo/
 │       ├── d4-readonly-db-tool/
 │       │   ├── db_policy.py
 │       │   ├── mcp_db_server.py
-│       │   └── native_db_tool.py
+│       │   ├── native_db_tool.py
+│       │   └── requirements.txt
 │       └── d5-change-review/
 │           ├── change_review_preflight.py
 │           └── sample_migration.sql
@@ -151,7 +152,7 @@ Every chapter's Prompt Toolkit is mirrored verbatim alongside the 21 named promp
 | `labs/ch24-agent-sdks/` | Chapter 24 | `ops_tools.py`, `test_ops_tools.py`, `ops_agent_openai.py`, `ops_agent_adk.py`, `requirements.txt`: the same bounded read-only ops agent built in OpenAI Agents SDK and Google ADK |
 | `labs/ch29-evals/` | Chapter 29 | `eval_cases.jsonl` and `eval_runner.py`: 10-case repeatable offline eval harness with simulated regression detection |
 | `labs/ch32-general-capstones/` | Chapter 32 | `g1-docs/` (3 fictional Northwind Parts policy docs), `g2-spec/` (`SPEC.md`, `starter_log_digest.py`, `test_log_digest.py`), `g3-n8n-triage/` (`sample_inbox.json`, `workflow-blueprint.json`) |
-| `labs/ch33-dba-capstones/` | Chapter 33 | `d1-sql-tuning/` (`lab_schema.sql`, `seed_lab_db.py`, `engine_explain_notes.sql`), `d3-log-triage/` (`sample_alert_log_redacted.log`, `triage_pipeline.py`), `d4-readonly-db-tool/` (`db_policy.py`, `native_db_tool.py`, `mcp_db_server.py`), `d5-change-review/` (`sample_migration.sql`, `change_review_preflight.py`) |
+| `labs/ch33-dba-capstones/` | Chapter 33 | `d1-sql-tuning/` (`lab_schema.sql`, `seed_lab_db.py`, `engine_explain_notes.sql`), `d3-log-triage/` (`sample_alert_log_redacted.log`, `triage_pipeline.py`), `d4-readonly-db-tool/` (`db_policy.py`, `native_db_tool.py`, `mcp_db_server.py`, `requirements.txt`), `d5-change-review/` (`sample_migration.sql`, `change_review_preflight.py`) |
 
 ### 3. Portable Agent Skills (`skills/`, 2 skill packages)
 

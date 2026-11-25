@@ -24,7 +24,7 @@ python3 server.py --db northwind_lab.db --self-test
 
 ## Step 2: Install the Official Python MCP SDK and Test With MCP Inspector
 
-Python 3.11+ is required by the official SDK:
+Python 3.11+ is recommended (`requirements.txt` pins `mcp[cli]==2.3.0` as of November 2026; check PyPI for newer security releases and update the pin deliberately):
 
 ```bash
 python3 -m venv .venv

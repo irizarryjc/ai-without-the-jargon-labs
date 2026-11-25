@@ -51,6 +51,7 @@ Include:
 3. A fixed 6-line summary output format so it returns clean facts to the main
    conversation without bloating context.
 4. Explicit stop conditions (when to stop searching and escalate to a human).
+Explain the risk of each step and how to verify it; do not assume it will run without review.
 ```
 
 **What good output looks like:** A tight, copy-ready subagent Markdown file with restricted tool access and a compact output contract that avoids wasting tokens.

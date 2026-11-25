@@ -2,7 +2,7 @@
 
 Companion lab materials for Chapter 33 (*Capstones, DBA and Sysadmin Track (Safely)*) of *AI Without the Jargon: A Hands-On Bootcamp for IT Professionals, DBAs, and Sysadmins* by **Juan C. Irizarry, OCP**.
 
-All scripts use strictly fictional **Northwind Parts** lab data (`customers`, `orders`, `order_lines`) and run locally with Python 3 standard library only (zero external packages, zero production connections).
+All scripts use strictly fictional **Northwind Parts** lab data (`customers`, `orders`, `order_lines`) with zero production connections. Every offline demo and `--self-test` check runs locally with Python 3 standard library only, while optional live MCP stdio transport in `d4-readonly-db-tool/` uses the pinned official Python MCP SDK (`mcp[cli]==2.3.0` in `requirements.txt`).
 
 ## Folder Layout
 
@@ -16,7 +16,8 @@ All scripts use strictly fictional **Northwind Parts** lab data (`customers`, `o
 - `d4-readonly-db-tool/`:
   - `db_policy.py`: Shared least-privilege read-only SQLite policy engine (query allowlist, parameter validation, row cap, timeout, append-only JSONL audit log).
   - `native_db_tool.py`: Native function-calling wrapper + runnable `--demo` showing allowed reads and blocked writes.
-  - `mcp_db_server.py`: Pure-Python JSON-RPC 2.0 stdio MCP server exposing the exact same read-only policy layer and audit log.
+  - `mcp_db_server.py`: Read-only stdio MCP server built on the official Python `mcp` SDK (`MCPServer` v2+ / `FastMCP` v1.x) exposing the exact same policy layer and audit log, with `--self-test` for offline checks.
+  - `requirements.txt`: Pinned `mcp[cli]==2.3.0` dependency (check PyPI and re-pin periodically).
 - `d5-change-review/`:
   - `sample_migration.sql`: Lab schema migration diff with intentional locking, missing-index, and destructive `DROP COLUMN` risks.
   - `change_review_preflight.py`: Deterministic pre-check flagging risky DDL patterns and enforcing human sign-off.

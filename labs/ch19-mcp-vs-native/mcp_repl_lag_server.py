@@ -7,8 +7,9 @@ Exposes the exact same read-only replication-lag check over MCP (stdio) so multi
 hosts (Claude Code, VS Code + Copilot, Cursor, Google Antigravity, Codex CLI, n8n)
 can share one server without rewriting integrations.
 
-Install the official Python MCP SDK before running as an MCP server:
-    pip install "mcp[cli]"
+Install the official Python MCP SDK before running as an MCP server (pinned as of
+November 2026; check PyPI for newer security releases and re-pin):
+    pip install "mcp[cli]==2.3.0"
 
 Run --self-test to verify the read-only handler locally without the MCP SDK installed.
 """

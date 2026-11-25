@@ -1,11 +1,10 @@
 {
-  "_comment": "Format as of November 2026; save as <project_root>/.mcp.json for Claude Code (or adapt for Cursor .cursor/mcp.json and Kiro .kiro/settings/mcp.json). Check current vendor docs.",
   "mcpServers": {
     "lab-docs-readonly": {
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/server-filesystem",
+        "@modelcontextprotocol/server-filesystem@2.4.0",
         "--read-only",
         "<project_root>/lab-docs"
       ]

@@ -1,9 +1,10 @@
 # Format as of November 2026; append to ~/.codex/config.toml for OpenAI Codex CLI.
-# Replace <project_root> with your absolute lab path. Check current Codex docs.
+# Replace <project_root> with your absolute lab path.
+# Pinned @modelcontextprotocol/server-filesystem@2.4.0; check npm for newer security releases and re-pin.
 
 [mcp_servers.lab_docs_readonly]
 command = "npx"
-args = ["-y", "@modelcontextprotocol/server-filesystem", "--read-only", "<project_root>/lab-docs"]
+args = ["-y", "@modelcontextprotocol/server-filesystem@2.4.0", "--read-only", "<project_root>/lab-docs"]
 
 [mcp_servers.northwind_readonly]
 command = "python3"
