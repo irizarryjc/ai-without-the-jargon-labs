@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "command": "python3 <project_root>/configs/hooks/guard_pre_tool.py --host copilot",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

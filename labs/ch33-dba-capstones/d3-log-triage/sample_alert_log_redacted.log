@@ -1,0 +1,10 @@
+2026-11-24T02:00:05Z lab-db-01 postgres[4102]: [INFO] Scheduled checkpoint starting: time
+2026-11-24T02:04:19Z lab-db-01 postgres[4102]: [ERROR] archive_command failed with exit code 1 (destination /mnt/lab-wal-archive)
+2026-11-24T02:05:19Z lab-db-01 postgres[4102]: [ERROR] archive_command failed with exit code 1 (destination /mnt/lab-wal-archive)
+2026-11-24T02:06:19Z lab-db-01 postgres[4102]: [ERROR] archive_command failed with exit code 1 (destination /mnt/lab-wal-archive)
+2026-11-24T02:07:02Z lab-db-01 kernel: [WARN] ext4 filesystem /mnt/lab-wal-archive usage at 94 percent
+2026-11-24T02:08:11Z lab-app-02 nginx[1820]: [ERROR] upstream timed out (110: Connection timed out) while reading response header from <app_upstream_01>
+2026-11-24T02:08:45Z lab-app-02 nginx[1820]: [ERROR] upstream timed out (110: Connection timed out) while reading response header from <app_upstream_01>
+2026-11-24T02:09:10Z lab-db-01 postgres[4199]: [WARN] duration: 6420.115 ms statement: SELECT region, COUNT(*) FROM orders WHERE order_status = 'DISPUTED' GROUP BY region
+2026-11-24T02:10:01Z lab-web-03 sshd[2201]: [INFO] Accepted publickey for <lab_ops_user> from 198.51.100.24 port 51204
+2026-11-24T02:11:30Z lab-app-02 app[3011]: [ERROR] pool exhausted waiting for read-only connection on <db_host>

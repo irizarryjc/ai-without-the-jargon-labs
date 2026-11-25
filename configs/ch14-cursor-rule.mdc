@@ -1,0 +1,14 @@
+---
+# Format as of November 2026; check current Cursor docs (cursor.com/docs/rules)
+description: "Safety and rollback rules for lab SQL scripts and migrations"
+globs: "**/*.sql"
+alwaysApply: false
+---
+
+# Lab SQL Safety Rules
+
+- Target synthetic lab schemas (`customers`, `orders`, `order_lines`) only; never reference live hosts or production credentials.
+- State the target database engine (Oracle, PostgreSQL, MySQL, or SQL Server) in a top comment whenever syntax is engine-specific.
+- Include a read-only pre-check query and an explicit rollback comment block for every DDL or DML script.
+- Flag operations that acquire exclusive table locks (`ALTER TABLE`, `TRUNCATE`, full-table `UPDATE`) and propose lower-lock alternatives where supported.
+- Never generate `DROP TABLE`, `TRUNCATE`, or `DELETE` without an explicit `WHERE` clause and human review note.

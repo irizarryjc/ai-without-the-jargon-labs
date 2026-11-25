@@ -1,0 +1,24 @@
+{
+  "_comment": "Format as of November 2026; save as <project_root>/.vscode/mcp.json for VS Code with GitHub Copilot. Note the root key is 'servers' (whereas portable root .mcp.json uses 'mcpServers'). Check current VS Code docs.",
+  "servers": {
+    "lab-docs-readonly": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--read-only",
+        "<project_root>/lab-docs"
+      ]
+    },
+    "northwind-readonly": {
+      "type": "stdio",
+      "command": "python3",
+      "args": [
+        "<project_root>/labs/ch18-mcp-server/server.py",
+        "--db",
+        "<project_root>/labs/ch18-mcp-server/northwind_lab.db"
+      ]
+    }
+  }
+}

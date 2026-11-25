@@ -1,0 +1,11 @@
+# Python bytecode and test caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local secrets and environment files (never commit real API keys or credentials)
+.env
+
+# Disposable SQLite lab databases and local audit logs generated during exercises
+*.db
+audit_log.jsonl

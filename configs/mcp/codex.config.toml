@@ -1,0 +1,14 @@
+# Format as of November 2026; append to ~/.codex/config.toml for OpenAI Codex CLI.
+# Replace <project_root> with your absolute lab path. Check current Codex docs.
+
+[mcp_servers.lab_docs_readonly]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "--read-only", "<project_root>/lab-docs"]
+
+[mcp_servers.northwind_readonly]
+command = "python3"
+args = [
+  "<project_root>/labs/ch18-mcp-server/server.py",
+  "--db",
+  "<project_root>/labs/ch18-mcp-server/northwind_lab.db",
+]

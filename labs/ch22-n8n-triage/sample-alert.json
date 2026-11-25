@@ -1,0 +1,7 @@
+{
+  "alert_id": "LAB-ALERT-402",
+  "host": "lab-pg-replica-01.example.test",
+  "service": "postgresql-lab",
+  "timestamp": "2026-11-24T03:12:00Z",
+  "message": "Replication replay lag exceeded 45 seconds for 3 consecutive checks on standby lab-pg-replica-01.example.test."
+}

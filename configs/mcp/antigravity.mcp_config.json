@@ -1,0 +1,25 @@
+{
+  "_comment": "Format as of November 2026; place in ~/.gemini/config/mcp_config.json (global) or <project_root>/.agents/mcp_config.json (workspace) for Google Antigravity. Check current Antigravity docs.",
+  "mcpServers": {
+    "lab-docs-readonly": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--read-only",
+        "<project_root>/lab-docs"
+      ]
+    },
+    "northwind-readonly": {
+      "command": "python3",
+      "args": [
+        "<project_root>/labs/ch18-mcp-server/server.py",
+        "--db",
+        "<project_root>/labs/ch18-mcp-server/northwind_lab.db"
+      ]
+    },
+    "example-remote-streamable-http": {
+      "url": "https://<mcp_server>/mcp"
+    }
+  }
+}
